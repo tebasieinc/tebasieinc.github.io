@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services & Programmes | Tebasie Inc</title>
+
+<style>
+/* ===== BASE ===== */
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+html{scroll-behavior:smooth}
+body{
+  background:#FFFFFF;
+  color:#050B2E;
+  line-height:1.7;
+}
+
+/* ===== ANIMATIONS ===== */
+.reveal{
+  opacity:0;
+  transform:translateY(60px);
+  transition:all .9s ease;
+}
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+.zoom{transform:scale(.88)}
+.reveal.active.zoom{transform:scale(1)}
+.slide-up{transform:translateY(60px)}
+.reveal.active.slide-up{transform:translateY(0)}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#0B0F1A;
+  color:#A0A4B8;
+  text-align:center;
+  padding:30px;
+  margin-top:80px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     SERVICES
+========================= -->
+<section class="services" id="services" style="padding:80px 20px;background:#FFFFFF;">
+  <h2 class="reveal slide-up" style="text-align:center;color:#0A1AFF;font-size:36px;margin-bottom:50px;">
+    Nos Services
+  </h2>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;max-width:1200px;margin:0 auto;">
+
+    <div class="reveal zoom" style="background:#F5F7FA;border-radius:14px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,0.1);">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" style="width:100%;height:200px;object-fit:cover;">
+      <div style="padding:25px;">
+        <h3 style="color:#0A1AFF;">Développement Web</h3>
+        <p style="color:#505766;">
+          Sites web professionnels, rapides et sécurisés pour entreprises et institutions.
+        </p>
+      </div>
+    </div>
+
+    <div class="reveal zoom" style="background:#F5F7FA;border-radius:14px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,0.1);">
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" style="width:100%;height:200px;object-fit:cover;">
+      <div style="padding:25px;">
+        <h3 style="color:#0A1AFF;">Applications</h3>
+        <p style="color:#505766;">
+          Applications mobiles et logicielles pour améliorer la productivité.
+        </p>
+      </div>
+    </div>
+
+    <div class="reveal zoom" style="background:#F5F7FA;border-radius:14px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,0.1);">
+      <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769" style="width:100%;height:200px;object-fit:cover;">
+      <div style="padding:25px;">
+        <h3 style="color:#0A1AFF;">IA & Innovation</h3>
+        <p style="color:#505766;">
+          Intelligence artificielle pour automatiser et innover.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================
+     PROGRAMMES (STYLE ISIPA)
+========================= -->
+<section class="programs" id="programs" style="padding:80px 20px;background:#F5F7FA;">
+  <h2 class="reveal slide-up" style="text-align:center;color:#0A1AFF;font-size:36px;margin-bottom:50px;">
+    Programmes & Solutions
+  </h2>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;max-width:1100px;margin:0 auto;">
+
+    <!-- PROGRAMME 1 -->
+    <div class="reveal slide-up">
+      <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df"
+           style="width:100%;height:180px;object-fit:cover;border-radius:10px 10px 0 0;">
+      <div style="background:white;padding:25px;border-left:6px solid #0A1AFF;border-radius:0 0 10px 10px;box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+        <h4>Formation en Informatique</h4>
+        <p style="color:#505766;margin-top:10px;">
+          Formation pratique pour développer des compétences numériques solides
+          et préparer les jeunes aux métiers du futur.
+        </p>
+      </div>
+    </div>
+
+    <!-- PROGRAMME 2 -->
+    <div class="reveal slide-up">
+      <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d"
+           style="width:100%;height:180px;object-fit:cover;border-radius:10px 10px 0 0;">
+      <div style="background:white;padding:25px;border-left:6px solid #0A1AFF;border-radius:0 0 10px 10px;box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+        <h4>Solutions e-commerce</h4>
+        <p style="color:#505766;margin-top:10px;">
+          Plateformes de vente en ligne sécurisées pour développer le commerce digital africain.
+        </p>
+      </div>
+    </div>
+
+    <!-- PROGRAMME 3 -->
+    <div class="reveal slide-up">
+      <img src="https://images.unsplash.com/photo-1588072432836-e10032774350"
+           style="width:100%;height:180px;object-fit:cover;border-radius:10px 10px 0 0;">
+      <div style="background:white;padding:25px;border-left:6px solid #0A1AFF;border-radius:0 0 10px 10px;box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+        <h4>Plateformes éducatives</h4>
+        <p style="color:#505766;margin-top:10px;">
+          Solutions numériques pour moderniser l’enseignement et faciliter l’apprentissage.
+        </p>
+      </div>
+    </div>
+
+    <!-- PROGRAMME 4 -->
+    <div class="reveal slide-up">
+      <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df"
+           style="width:100%;height:180px;object-fit:cover;border-radius:10px 10px 0 0;">
+      <div style="background:white;padding:25px;border-left:6px solid #0A1AFF;border-radius:0 0 10px 10px;box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+        <h4>Transformation digitale</h4>
+        <p style="color:#505766;margin-top:10px;">
+          Accompagnement stratégique pour digitaliser les entreprises et institutions.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================
+     FOOTER
+========================= -->
+<footer>
+  © 2026 Tebasie Inc — Pas de limite pour l’Afrique qui avance
+</footer>
+
+<script>
+/* ===== SCROLL ANIMATION ===== */
+function reveal(){
+  document.querySelectorAll('.reveal').forEach(el=>{
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 120){
+      el.classList.add('active');
+    }
+  });
+}
+window.addEventListener('scroll', reveal);
+reveal();
+</script>
+
+</body>
+</html>
