@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tebasie Inc</title>
+
+<style>
+/* =========================
+   PALETTE TEBASIE INC
+========================= */
+:root{
+  --primary-blue:#0A1AFF;
+  --deep-blue:#050B2E;
+  --light-blue:#3FA9F5;
+  --accent-yellow:#FFC300;
+  --bg-dark:#0B0F1A;
+  --bg-light:#F5F7FA;
+  --text-light:#FFFFFF;
+  --text-muted:#A0A4B8;
+}
+
+/* =========================
+   MODE SOMBRE
+========================= */
+body.dark{
+  --bg-light:#0B0F1A;
+  --bg-card:#11162A;
+  --bg-footer:#050812;
+  --text-main:#FFFFFF;
+  --text-muted:#A0A4B8;
+}
+
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+html{scroll-behavior:smooth}
+body{background:var(--bg-light);color:var(--deep-blue);line-height:1.7}
+
+/* =========================
+   HEADER
+========================= */
+header{background:var(--primary-blue);position:sticky;top:0;z-index:1000}
+nav{
+  max-width:1200px;margin:auto;padding:18px;
+  display:flex;justify-content:space-between;align-items:center
+}
+.logo{color:white;font-size:24px;font-weight:bold}
+.logo span{color:var(--accent-yellow)}
+nav a{color:white;text-decoration:none;margin-left:20px;font-weight:500}
+.toggle{
+  background:var(--accent-yellow);
+  border:none;padding:8px 14px;border-radius:20px;
+  font-weight:bold;cursor:pointer;margin-left:20px;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero{
+  height:90vh;
+  background:linear-gradient(rgba(5,11,46,.75),rgba(5,11,46,.75)),
+             url(https://images.unsplash.com/photo-1526378722484-bd91ca387e72);
+  background-size:cover;background-position:center;
+  display:flex;align-items:center;text-align:center;color:white
+}
+.hero-content{max-width:900px;margin:auto;padding:20px}
+.hero h1{font-size:46px;margin-bottom:20px}
+.hero p{color:var(--text-muted);font-size:18px}
+.btn{
+  display:inline-block;margin-top:30px;padding:14px 35px;
+  background:var(--accent-yellow);color:var(--deep-blue);
+  font-weight:bold;border-radius:8px;text-decoration:none
+}
+
+/* =========================
+   SECTIONS
+========================= */
+section{max-width:1200px;margin:auto;padding:90px 20px}
+section h2{text-align:center;margin-bottom:50px;color:var(--primary-blue)}
+.about p{text-align:center;max-width:900px;margin:auto;font-size:18px;color:var(--text-muted)}
+
+/* =========================
+   SERVICES
+========================= */
+.services{background:var(--bg-light)}
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px
+}
+.service-card{
+  background:var(--bg-light);
+  border-radius:14px;overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,.15)
+}
+.service-card img{width:100%;height:200px;object-fit:cover}
+.service-card div{padding:25px}
+
+/* =========================
+   PROGRAMS
+========================= */
+.programs{background:var(--bg-light)}
+.program-list{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px
+}
+.program{
+  background:var(--bg-light);padding:30px;
+  border-left:6px solid var(--primary-blue);
+  border-radius:10px
+}
+
+/* =========================
+   STATS
+========================= */
+.stats{
+  background:linear-gradient(135deg,var(--primary-blue),var(--deep-blue));
+  color:white
+}
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:30px;text-align:center
+}
+.stat h3{font-size:36px;color:var(--accent-yellow)}
+
+/* =========================
+   CONTACT
+========================= */
+.contact form{
+  max-width:500px;margin:auto;
+  display:flex;flex-direction:column;gap:15px
+}
+input,textarea{padding:12px;border-radius:6px;border:1px solid #ccc}
+button{
+  background:var(--primary-blue);
+  color:white;padding:14px;
+  border:none;border-radius:8px;font-weight:bold;cursor:pointer
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer{
+  background:var(--bg-dark);color:var(--text-muted);
+  text-align:center;padding:30px
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+.reveal{opacity:0;transform:translateY(60px);transition:all .9s ease}
+.reveal.active{opacity:1;transform:translateY(0)}
+.slide-up{transform:translateY(60px)}
+.slide-left{transform:translateX(-60px)}
+.slide-right{transform:translateX(60px)}
+.zoom{transform:scale(.85)}
+.reveal.active.slide-up,
+.reveal.active.slide-left,
+.reveal.active.slide-right,
+.reveal.active.zoom{
+  transform:translate(0) scale(1)
+}
+.delay-1{transition-delay:.2s}
+.delay-2{transition-delay:.4s}
+.delay-3{transition-delay:.6s}
+
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
+@media (max-width:1024px){
+  .hero h1{font-size:38px}
+  .hero p{font-size:16px}
+  nav{flex-direction:column;align-items:flex-start}
+  nav a{margin:8px 0}
+}
+@media (max-width:768px){
+  .service-grid{grid-template-columns:1fr;gap:20px}
+  .program-list{grid-template-columns:1fr;gap:20px}
+  .stats-grid{grid-template-columns:1fr;gap:20px}
+  .hero h1{font-size:32px}
+  .hero p{font-size:15px}
+  .btn{padding:12px 25px;font-size:14px}
+  section{padding:60px 15px}
+}
+@media (max-width:480px){
+  .hero h1{font-size:28px}
+  .hero p{font-size:14px}
+  .logo{font-size:20px}
+  nav a{font-size:14px}
+  .toggle{padding:6px 12px;font-size:12px}
+  input,textarea,button{font-size:14px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Tebasie <span>Inc</span></div>
+    <div>
+      <!-- ACTIONS AJOUTÉES -->
+      <a href="accueil.html">Accueil</a>
+      <a href="about.html">À propos</a>
+      <a href="#services">Services</a>
+      <a href="program_service.html">Programmes</a>
+      <a href=contact.html">Contact</a>
+      <button class="toggle" onclick="toggleMode()">🌙</button>
+    </div>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-content reveal slide-up">
+    <h1>Innovation & Technologie pour l’Afrique</h1>
+    <p>Des solutions numériques modernes pour accélérer le futur africain.</p>
+    <a class="btn" href="#services">Découvrir</a>
+  </div>
+</div>
+
+<section class="about reveal slide-up">
+  <h2>Qui sommes-nous ?</h2>
+  <p>
+    Tebasie Inc est une entreprise technologique panafricaine
+    dédiée à l’innovation et au développement digital.
+  </p>
+</section>
+
+<!-- ID AJOUTÉ POUR LE SCROLL -->
+<section id="services" class="services reveal">
+  <h2 class="reveal slide-up">Nos Services</h2>
+  <div class="service-grid">
+    <div class="service-card reveal zoom delay-1">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+      <div><h3>Développement Web</h3><p>Sites modernes et performants.</p></div>
+    </div>
+    <div class="service-card reveal zoom delay-2">
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+      <div><h3>Applications</h3><p>Solutions mobiles et logicielles.</p></div>
+    </div>
+    <div class="service-card reveal zoom delay-3">
+      <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769">
+      <div><h3>IA & Innovation</h3><p>Technologies du futur.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="programs reveal">
+  <h2>Programmes & Solutions</h2>
+  <div class="program-list">
+    <div class="program reveal">Formation en Informatique</div>
+    <div class="program reveal">Solutions e-commerce</div>
+    <div class="program reveal">Plateformes éducatives</div>
+    <div class="program reveal">Transformation digitale</div>
+  </div>
+</section>
+
+<section class="stats reveal slide-up">
+  <div class="stats-grid">
+    <div class="stat reveal slide-left delay-1"><h3>10+</h3><p>Projets</p></div>
+    <div class="stat reveal slide-up delay-2"><h3>5+</h3><p>Domaines</p></div>
+    <div class="stat reveal slide-right delay-3"><h3>100%</h3><p>Vision Afrique</p></div>
+  </div>
+</section>
+
+<!-- ID AJOUTÉ POUR LE SCROLL -->
+<section id="contact" class="contact reveal slide-up">
+  <h2>Contact</h2>
+  <form>
+    <input type="text" placeholder="Nom">
+    <input type="email" placeholder="Email">
+    <textarea rows="4" placeholder="Message"></textarea>
+    <button>Envoyer</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 Tebasie Inc — Pas de limite pour l’Afrique qui avance
+</footer>
+
+<script>
+/* =========================
+   MODE SOMBRE
+========================= */
+function toggleMode(){
+  document.body.classList.toggle("dark");
+}
+
+/* =========================
+   ANIMATION SCROLL
+========================= */
+function reveal(){
+  document.querySelectorAll(".reveal").forEach(el=>{
+    const top=el.getBoundingClientRect().top;
+    if(top<window.innerHeight-120){el.classList.add("active")}
+  });
+}
+window.addEventListener("scroll",reveal);
+reveal();
+</script>
+
+</body>
+  </html>
