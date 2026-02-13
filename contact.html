@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Tebasie Inc</title>
+<style>
+/* Style général */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0B0F1A;
+    color: white;
+}
+
+/* Menu navigation */
+nav {
+    background: #0A1AFF;
+    padding: 15px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Section principale */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #111827;
+    border-radius: 12px;
+}
+
+h1 {
+    text-align: center;
+    color: #FFD700; /* Accent gold */
+}
+
+/* Formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+}
+input, textarea {
+    margin: 10px 0;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+input:focus, textarea:focus {
+    outline: 2px solid #0A1AFF;
+}
+
+/* Bouton envoyer */
+button {
+    background: #0A1AFF;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+button:hover {
+    background: #081AFA;
+}
+
+/* Infos contact visibles */
+.contact-info {
+    margin-top: 30px;
+    text-align: center;
+}
+.contact-info p {
+    margin: 5px 0;
+}
+.contact-info a {
+    color: #FFD700;
+    text-decoration: none;
+}
+.contact-info a:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Menu -->
+<nav>
+  <a href="accueil.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="progam_service.html">Program Services</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- Contenu principal -->
+<div class="container">
+    <h1>Contactez-nous</h1>
+
+    <form>
+        <input type="text" name="name" placeholder="Nom" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="subject" placeholder="Sujet" required>
+        <textarea name="message" placeholder="Votre message" rows="6" required></textarea>
+        <button type="submit">Envoyer</button>
+    </form>
+
+    <!-- Infos visibles -->
+    <div class="contact-info">
+        <p>Email: <a href="mailto:tebasie.inc@gmail.com">tebasie.inc@gmail.com</a></p>
+        <p>Suivez-nous sur : 
+            <a href="https://www.facebook.com/share/17wqyiR3C2/" target="_blank">Facebook</a> | 
+            <a href="https://whatsapp.com/channel/0029VbBjxLGHbFVC6MRPf31C" target="_blank">WhatsApp</a>
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
